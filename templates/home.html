@@ -1,0 +1,246 @@
+{% include "header.html" %}
+	<div class="content">
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="c1">
+                    <h1>House Price Prediction</h1>
+                    <form class="form-group" action="/predict" method="POST">
+                        <div class="form-group col-md-6 col-md-offset-3 mt-4">
+                            <label for="town">Select Town:</label>
+                            <select name="town" class="form-control" id="town">
+                                <option value="Ansonia">Ansonia</option>
+                                <option value="Avon">Avon</option>
+                                <option value="Barkhamsted">Barkhamsted</option>
+                                <option value="Beacon Falls">Beacon Falls</option>
+                                <option value="Berlin">Berlin</option>
+                                <option value="Bethel">Bethel</option>
+                                <option value="Bethlehem">Bethlehem</option>
+                                <option value="Bolton">Bolton</option>
+                                <option value="Branford">Branford</option>
+                                <option value="Bristol">Bristol</option>
+                                <option value="Brookfield">Brookfield</option>
+                                <option value="Burlington">Burlington</option>
+                                <option value="Canton">Canton</option>
+                                <option value="Cheshire">Cheshire</option>
+                                <option value="Colchester">Colchester</option>
+                                <option value="Coventry">Coventry</option>
+                                <option value="Cromwell">Cromwell</option>
+                                <option value="Danbury">Danbury</option>
+                                <option value="Darien">Darien</option>
+                                <option value="Derby">Derby</option>
+                                <option value="East Granby">East Granby</option>
+                                <option value="East Haddam">East Haddam</option>
+                                <option value="East Hartford">East Hartford</option>
+                                <option value="East Haven">East Haven</option>
+                                <option value="East Lyme">East Lyme</option>
+                                <option value="Easton">Easton</option>
+                                <option value="East Windsor">East Windsor</option>
+                                <option value="Enfield">Enfield</option>
+                                <option value="Essex">Essex</option>
+                                <option value="Farmington">Farmington</option>
+                                <option value="Franklin">Franklin</option>
+                                <option value="Glastonbury">Glastonbury</option>
+                                <option value="Goshen">Goshen</option>
+                                <option value="Granby">Granby</option>
+                                <option value="Greenwich">Greenwich</option>
+                                <option value="Griswold">Griswold</option>
+                                <option value="Groton">Groton</option>
+                                <option value="Guilford">Guilford</option>
+                                <option value="Hartford">Hartford</option>
+                                <option value="Harwinton">Harwinton</option>
+                                <option value="Killingly">Killingly</option>
+                                <option value="Killingworth">Killingworth</option>
+                                <option value="Lebanon">Lebanon</option>
+                                <option value="Lisbon">Lisbon</option>
+                                <option value="Litchfield">Litchfield</option>
+                                <option value="Madison">Madison</option>
+                                <option value="Manchester">Manchester</option>
+                                <option value="Mansfield">Mansfield</option>
+                                <option value="Meriden">Meriden</option>
+                                <option value="Middlebury">Middlebury</option>
+                                <option value="Middletown">Middletown</option>
+                                <option value="Milford">Milford</option>
+                                <option value="Monroe">Monroe</option>
+                                <option value="Montville">Montville</option>
+                                <option value="Naugatuck">Naugatuck</option>
+                                <option value="New Britain">New Britain</option>
+                                <option value="New Canaan">New Canaan</option>
+                                <option value="New Fairfield">New Fairfield</option>
+                                <option value="New Haven">New Haven</option>
+                                <option value="New London">New London</option>
+                                <option value="Newtown">Newtown</option>
+                                <option value="North Canaan">North Canaan</option>
+                                <option value="North Haven">North Haven</option>
+                                <option value="Norwalk">Norwalk</option>
+                                <option value="Norwich">Norwich</option>
+                                <option value="Old Lyme">Old Lyme</option>
+                                <option value="Old Saybrook">Old Saybrook</option>
+                                <option value="Orange">Orange</option>
+                                <option value="Plainfield">Plainfield</option>
+                                <option value="Plainville">Plainville</option>
+                                <option value="Plymouth">Plymouth</option>
+                                <option value="Portland">Portland</option>
+                                <option value="Preston">Preston</option>
+                                <option value="Putnam">Putnam</option>
+                                <option value="Rocky Hill">Rocky Hill</option>
+                                <option value="Salem">Salem</option>
+                                <option value="Sharon">Sharon</option>
+                                <option value="Shelton">Shelton</option>
+                                <option value="Simsbury">Simsbury</option>
+                                <option value="Southbury">Southbury</option>
+                                <option value="South Windsor">South Windsor</option>
+                                <option value="Stamford">Stamford</option>
+                                <option value="Stonington">Stonington</option>
+                                <option value="Stratford">Stratford</option>
+                                <option value="Suffield">Suffield</option>
+                                <option value="Thomaston">Thomaston</option>
+                                <option value="Thompson">Thompson</option>
+                                <option value="Tolland">Tolland</option>
+                                <option value="Torrington">Torrington</option>
+                                <option value="Trumbull">Trumbull</option>
+                                <option value="Vernon">Vernon</option>
+                                <option value="Washington">Washington</option>
+                                <option value="Waterbury">Waterbury</option>
+                                <option value="Waterford">Waterford</option>
+                                <option value="Watertown">Watertown</option>
+                                <option value="Westbrook">Westbrook</option>
+                                <option value="West Hartford">West Hartford</option>
+                                <option value="Hampton">Hampton</option>
+                                <option value="Wethersfield">Wethersfield</option>
+                                <option value="Willington">Willington</option>
+                                <option value="Wilton">Wilton</option>
+                                <option value="Winchester">Winchester</option>
+                                <option value="Ashford">Ashford</option>
+                                <option value="Windham">Windham</option>
+                                <option value="Windsor Locks">Windsor Locks</option>
+                                <option value="Wolcott">Wolcott</option>
+                                <option value="Woodbridge">Woodbridge</option>
+                                <option value="Woodstock">Woodstock</option>
+                                <option value="Lyme">Lyme</option>
+                                <option value="Colebrook">Colebrook</option>
+                                <option value="Bozrah">Bozrah</option>
+                                <option value="Bloomfield">Bloomfield</option>
+                                <option value="Bridgeport">Bridgeport</option>
+                                <option value="Bethany">Bethany</option>
+                                <option value="Columbia">Columbia</option>
+                                <option value="Bridgewater">Bridgewater</option>
+                                <option value="Kent">Kent</option>
+                                <option value="Hebron">Hebron</option>
+                                <option value="Eastford">Eastford</option>
+                                <option value="Cornwall">Cornwall</option>
+                                <option value="Chaplin">Chaplin</option>
+                                <option value="Canaan">Canaan</option>
+                                <option value="Andover">Andover</option>
+                                <option value="Chester">Chester</option>
+                                <option value="Hamden">Hamden</option>
+                                <option value="Clinton">Clinton</option>
+                                <option value="East Hampton">East Hampton</option>
+                                <option value="Hartland">Hartland</option>
+                                <option value="Deep River">Deep River</option>
+                                <option value="Fairfield">Fairfield</option>
+                                <option value="Brooklyn">Brooklyn</option>
+                                <option value="Ridgefield">Ridgefield</option>
+                                <option value="Redding">Redding</option>
+                                <option value="Middlefield">Middlefield</option>
+                                <option value="Morris">Morris</option>
+                                <option value="New Hartford">New Hartford</option>
+                                <option value="Sherman">Sherman</option>
+                                <option value="Norfolk">Norfolk</option>
+                                <option value="Scotland">Scotland</option>
+                                <option value="Sprague">Sprague</option>
+                                <option value="Roxbury">Roxbury</option>
+                                <option value="Sterling">Sterling</option>
+                                <option value="Somers">Somers</option>
+                                <option value="Newington">Newington</option>
+                                <option value="North Branford">North Branford</option>
+                                <option value="Windsor">Windsor</option>
+                                <option value="Weston">Weston</option>
+                                <option value="Warren">Warren</option>
+                                <option value="Woodbury">Woodbury</option>
+                                <option value="Ledyard">Ledyard</option>
+                                <option value="Wallingford">Wallingford</option>
+                                <option value="Union">Union</option>
+                                <option value="Marlborough">Marlborough</option>
+                                <option value="Ellington">Ellington</option>
+                                <option value="Canterbury">Canterbury</option>
+                                <option value="Stafford">Stafford</option>
+                                <option value="Pomfret">Pomfret</option>
+                                <option value="West Haven">West Haven</option>
+                                <option value="Westport">Westport</option>
+                                <option value="Oxford">Oxford</option>
+                                <option value="Southington">Southington</option>
+                                <option value="New Milford">New Milford</option>
+                                <option value="Voluntown">Voluntown</option>
+                                <option value="Durham">Durham</option>
+                                <option value="Seymour">Seymour</option>
+                                <option value="Salisbury">Salisbury</option>
+                                <option value="Haddam">Haddam</option>
+                                <option value="Prospect">Prospect</option>
+                                <option value="North Stonington">North Stonington</option>
+                                <option value="***Unknown***">***Unknown***</option>
+                            </select>
+                            
+                        </div>
+                        <div class="form-group col-md-6 col-md-offset-3">
+                            <label for="se">Select Property Type : </label>
+                            <select name="property_type" class="form-control" id="property_type">
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Vacant Land">Vacant Land</option>
+                                <option value="Public Utility">Public Utility</option>
+                                <option value="Apartments">Apartments</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Condo">Condo</option>
+                                <option value="Two Family">Two Family</option>
+                                <option value="Single Family">Single Family</option>
+                                <option value="Three Family">Three Family</option>
+                                <option value="Four Family">Four Family</option>
+                            </select>
+                            
+                        </div>
+                        <div class="form-group col-md-6 col-md-offset-3">
+                            <label for="se">Select Residential Type : </label>
+                            <select name="residential_type" class="form-control" id="residential_type">
+                                <option value="Residential">Residential</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Vacant Land">Vacant Land</option>
+                                <option value="Public Utility">Public Utility</option>
+                                <option value="Apartments">Apartments</option>
+                                <option value="Industrial">Industrial</option>
+                                <option value="Condo">Condo</option>
+                                <option value="Two Family">Two Family</option>
+                                <option value="Single Family">Single Family</option>
+                                <option value="Three Family">Three Family</option>
+                                <option value="Four Family">Four Family</option>
+                            </select>
+                            
+                        </div>
+
+                        <div class="form-group col-md-6 col-md-offset-3">
+                            <label for="predict1">Assessed Value : </label>
+                            <input type="text" class="form-control" id="predict1" name="Avalue" required>
+                        </div>
+                        <div class="form-group col-md-6 col-md-offset-3">
+                            <label for="predict2">Sales Ratio : </label>
+                            <input type="text" class="form-control" id="predict2" name="sales_ratio" required>
+                        </div>
+                        <div class="form-group col-md-6 col-md-offset-3">
+                            <label for="predict3">List Year : </label>
+                            <input type="text" class="form-control" id="predict3" name="List_year" required>
+                        </div>
+                        <div class="form-group col-md-6 col-md-offset-3">
+                        	<hr>
+                        	<button type="submit" class="btn btn-default col-md-6 col-md-offset-3">Predict</button>	
+                        </div>
+                                {% if prediction is not none %}
+                            <div class="result form-group col-md-6 col-md-offset-3">
+                                <h3>Predicted Sales Price: {{ prediction }}</h3>
+                            </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
